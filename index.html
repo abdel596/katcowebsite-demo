@@ -39,9 +39,9 @@
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     html { scroll-behavior: smooth; }
-
+ 
     body {
       background-color: #0a0a0b;
       color: #e5e7eb;
@@ -49,7 +49,7 @@
       overflow-x: hidden;
       cursor: none;
     }
-
+ 
     /* ---- CUSTOM CURSOR ---- */
     .cursor {
       width: 12px; height: 12px;
@@ -72,7 +72,7 @@
     }
     body:hover .cursor-ring { }
     a:hover ~ .cursor, button:hover ~ .cursor { transform: scale(2.5); }
-
+ 
     /* ---- NOISE OVERLAY ---- */
     body::before {
       content: '';
@@ -84,15 +84,15 @@
       z-index: 1;
       opacity: 0.4;
     }
-
+ 
     /* ---- SCROLLBAR ---- */
     ::-webkit-scrollbar { width: 3px; }
     ::-webkit-scrollbar-track { background: #0a0a0b; }
     ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 2px; }
-
+ 
     /* ---- SELECTION ---- */
     ::selection { background: rgba(16,185,129,0.3); color: #fff; }
-
+ 
     /* ---- NAV ---- */
     #navbar {
       position: fixed; top: 0; left: 0; right: 0;
@@ -124,7 +124,7 @@
     }
     .nav-link:hover { color: #fff; }
     .nav-link:hover::after { width: 100%; }
-
+ 
     /* ---- HERO ---- */
     #hero {
       position: relative;
@@ -133,7 +133,7 @@
       justify-content: flex-end;
       overflow: hidden;
     }
-
+ 
     .hero-bg {
       position: absolute; inset: 0;
       background:
@@ -141,7 +141,7 @@
         radial-gradient(ellipse 50% 40% at 20% 80%, rgba(245,158,11,0.05) 0%, transparent 50%),
         linear-gradient(180deg, #0a0a0b 0%, #0c0f0d 50%, #0a0a0b 100%);
     }
-
+ 
     /* SVG Grid */
     .hero-grid {
       position: absolute; inset: 0;
@@ -151,7 +151,7 @@
       background-size: 80px 80px;
       mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.3) 70%, transparent 100%);
     }
-
+ 
     /* Horizon glow */
     .hero-glow {
       position: absolute; bottom: -100px; left: 50%;
@@ -160,7 +160,7 @@
       background: radial-gradient(ellipse, rgba(16,185,129,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
-
+ 
     /* Dust particles */
     .particle {
       position: absolute;
@@ -176,7 +176,7 @@
       80%  { opacity: var(--op, 0.4); }
       100% { transform: translateY(-120px) translateX(var(--dx, 30px)); opacity: 0; }
     }
-
+ 
     /* Scan line */
     .scanline {
       position: absolute; left: 0; right: 0;
@@ -190,7 +190,7 @@
       95%  { opacity: 1; }
       100% { top: 100%; opacity: 0; }
     }
-
+ 
     /* Hero title */
     .hero-title {
       font-family: 'Bebas Neue', sans-serif;
@@ -202,14 +202,14 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
+ 
     .hero-title .accent {
       background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
+ 
     /* Vertical text */
     .vertical-text {
       writing-mode: vertical-rl;
@@ -221,7 +221,7 @@
       color: #6b7280;
       text-transform: uppercase;
     }
-
+ 
     /* ---- SECTION REVEALS ---- */
     .reveal {
       opacity: 0;
@@ -244,7 +244,7 @@
       transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1);
     }
     .reveal-right.visible { opacity: 1; transform: translateX(0); }
-
+ 
     /* stagger children */
     .stagger > * { opacity: 0; transform: translateY(30px); }
     .stagger.visible > *:nth-child(1) { animation: slideUp 0.7s 0.1s cubic-bezier(0.16,1,0.3,1) forwards; }
@@ -254,7 +254,7 @@
     @keyframes slideUp {
       to { opacity: 1; transform: translateY(0); }
     }
-
+ 
     /* ---- DIAGONAL DIVIDER ---- */
     .diagonal-top {
       clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%);
@@ -262,7 +262,7 @@
     .diagonal-bottom {
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%);
     }
-
+ 
     /* ---- SECTION LABEL ---- */
     .section-label {
       font-family: 'DM Mono', monospace;
@@ -271,7 +271,7 @@
       text-transform: uppercase;
       color: #10b981;
     }
-
+ 
     /* ---- EMERALD LINE ---- */
     .emerald-line {
       display: inline-block;
@@ -280,7 +280,7 @@
       vertical-align: middle;
       margin-right: 0.75rem;
     }
-
+ 
     /* ---- STAT COUNTER ---- */
     .stat-number {
       font-family: 'Bebas Neue', sans-serif;
@@ -291,7 +291,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
+ 
     /* ---- PROCESS STEP ---- */
     .process-step {
       position: relative;
@@ -312,7 +312,7 @@
       background: linear-gradient(180deg, rgba(16,185,129,0.4), transparent);
     }
     .process-step:last-child::after { display: none; }
-
+ 
     /* ---- PROJECT CARD ---- */
     .project-card {
       position: relative;
@@ -342,7 +342,7 @@
       position: absolute; inset: 0;
       background: linear-gradient(180deg, transparent 40%, rgba(10,10,11,0.9) 100%);
     }
-
+ 
     /* ---- BUTTON ---- */
     .btn-primary {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -375,7 +375,7 @@
       clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
     }
     .btn-outline:hover { border-color: #10b981; color: #10b981; transform: translateY(-2px); }
-
+ 
     /* ---- SUSTAINABILITY ITEM ---- */
     .sustain-item {
       display: flex; gap: 1.25rem;
@@ -388,23 +388,23 @@
       border-color: rgba(16,185,129,0.2);
       background: rgba(16,185,129,0.03);
     }
-
+ 
     /* ---- FOOTER ---- */
     footer a { color: #6b7280; transition: color 0.2s; }
     footer a:hover { color: #10b981; }
-
+ 
     /* ---- MOBILE ---- */
     @media (max-width: 768px) {
       body { cursor: auto; }
       .cursor, .cursor-ring { display: none; }
     }
-
+ 
     /* ---- HERO COUNTER ---- */
     @keyframes countUp {
       from { opacity: 0; transform: translateY(10px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
+ 
     /* ---- AMBER GLOW TAG ---- */
     .amber-tag {
       display: inline-flex; align-items: center; gap: 0.4rem;
@@ -430,7 +430,7 @@
       text-transform: uppercase;
       border-radius: 1px;
     }
-
+ 
     /* pulse dot */
     .pulse-dot {
       width: 7px; height: 7px;
@@ -444,7 +444,7 @@
       70%  { box-shadow: 0 0 0 8px rgba(16,185,129,0); }
       100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); }
     }
-
+ 
     /* ---- ISR DIAGRAM ---- */
     .isr-node {
       position: relative;
@@ -464,7 +464,7 @@
       border-color: rgba(16,185,129,0.6);
       background: rgba(16,185,129,0.1);
     }
-
+ 
     /* ---- CAREER CARD ---- */
     .career-card {
       padding: 1.5rem;
@@ -478,7 +478,7 @@
       border-color: rgba(16,185,129,0.3);
       background: rgba(16,185,129,0.02);
     }
-
+ 
     /* ---- CONTACT INPUT ---- */
     .field {
       width: 100%;
@@ -494,9 +494,9 @@
     }
     .field:focus { border-color: rgba(16,185,129,0.4); }
     .field::placeholder { color: #4b5563; }
-
+ 
     textarea.field { resize: vertical; min-height: 140px; }
-
+ 
     /* map placeholder */
     .map-placeholder {
       background: #111113;
@@ -515,7 +515,7 @@
         linear-gradient(90deg, rgba(16,185,129,0.04) 1px, transparent 1px);
       background-size: 40px 40px;
     }
-
+ 
     /* ---- HERO SCROLL INDICATOR ---- */
     .scroll-indicator {
       display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
@@ -532,11 +532,11 @@
   </style>
 </head>
 <body>
-
+ 
 <!-- Custom Cursor -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-
+ 
 <!-- ===================== NAVBAR ===================== -->
 <nav id="navbar" class="flex items-center justify-between">
   <a href="#hero" class="flex items-center gap-3" style="cursor:none">
@@ -550,7 +550,7 @@
     </svg>
     <span style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:0.08em;color:#fff">KATCO</span>
   </a>
-
+ 
   <!-- Desktop links -->
   <div class="hidden md:flex items-center gap-8">
     <a href="#about"    class="nav-link">About</a>
@@ -560,14 +560,14 @@
     <a href="#careers"  class="nav-link">Careers</a>
     <a href="#contact"  class="nav-link">Contact</a>
   </div>
-
+ 
   <!-- Lang + CTA -->
   <div class="hidden md:flex items-center gap-4">
     <span class="nav-link" style="color:#e5e7eb">EN</span>
     <span style="color:#1e1e22">|</span>
     <a href="#contact" class="btn-primary text-xs py-2 px-4" style="clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))">Get in Touch</a>
   </div>
-
+ 
   <!-- Mobile hamburger -->
   <button id="mobileMenu" class="md:hidden flex flex-col gap-1.5 p-2" style="cursor:pointer;background:none;border:none">
     <span style="display:block;width:24px;height:1.5px;background:#e5e7eb;transition:all 0.3s"></span>
@@ -575,7 +575,7 @@
     <span style="display:block;width:24px;height:1.5px;background:#e5e7eb;transition:all 0.3s"></span>
   </button>
 </nav>
-
+ 
 <!-- Mobile Menu -->
 <div id="mobileNav" class="fixed inset-0 z-50 flex-col justify-center items-center gap-8 hidden" style="background:rgba(10,10,11,0.98);backdrop-filter:blur(20px)">
   <button id="closeMenu" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#9ca3af;font-size:1.5rem;cursor:pointer">✕</button>
@@ -588,17 +588,17 @@
     <a href="#contact"  class="nav-link" style="font-size:1rem" onclick="closeMobileNav()">Contact</a>
   </div>
 </div>
-
+ 
 <!-- ===================== HERO ===================== -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
   <div class="scanline"></div>
-
+ 
   <!-- Particles -->
   <div id="particles"></div>
-
+ 
   <!-- Side labels -->
   <div class="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 flex-col items-center gap-4" style="z-index:5">
     <span class="vertical-text">Kazakhstan · Uranium · Excellence</span>
@@ -608,10 +608,10 @@
     <div style="width:1px;height:60px;background:linear-gradient(180deg,rgba(16,185,129,0.3),transparent)"></div>
     <span class="vertical-text">Est. 1996 · AREVA + Kazatomprom</span>
   </div>
-
+ 
   <!-- Main content -->
   <div class="relative px-6 md:px-16 pb-16 md:pb-24" style="z-index:5">
-
+ 
     <!-- Status row -->
     <div class="flex flex-wrap items-center gap-3 mb-6 reveal" style="transition-delay:0.2s">
       <div class="emerald-tag">
@@ -621,7 +621,7 @@
       <div class="amber-tag">⚛ ISR Technology</div>
       <div class="amber-tag">🇰🇿 Kazakhstan</div>
     </div>
-
+ 
     <!-- Title -->
     <div class="reveal" style="transition-delay:0.3s">
       <h1 class="hero-title">
@@ -630,7 +630,7 @@
         OF ENERGY
       </h1>
     </div>
-
+ 
     <!-- Subtitle -->
     <div class="mt-6 reveal" style="transition-delay:0.5s;max-width:540px">
       <p style="color:#9ca3af;font-size:1.0625rem;line-height:1.7">
@@ -639,13 +639,13 @@
         In-Situ Recovery technology.
       </p>
     </div>
-
+ 
     <!-- CTAs -->
     <div class="flex flex-wrap gap-4 mt-8 reveal" style="transition-delay:0.6s">
       <a href="#tech" class="btn-primary">Explore Technology</a>
       <a href="#about" class="btn-outline">Our Story</a>
     </div>
-
+ 
     <!-- Stats row -->
     <div class="flex flex-wrap items-center gap-8 mt-12 pt-8 reveal" style="transition-delay:0.7s;border-top:1px solid #1e1e22">
       <div>
@@ -669,28 +669,28 @@
       <div style="width:1px;height:40px;background:#1e1e22"></div>
       <div>
         <div style="font-family:'Bebas Neue',sans-serif;font-size:2.25rem;color:#10b981;line-height:1">
-          <span class="count-up" data-target="1800">0</span>+
+          <span class="count-up" data-target="1200">0</span>+
         </div>
         <div style="font-size:0.75rem;color:#6b7280;letter-spacing:0.08em;text-transform:uppercase;margin-top:2px">Employees</div>
       </div>
     </div>
   </div>
-
+ 
   <!-- Scroll indicator -->
   <div class="absolute bottom-6 left-1/2 -translate-x-1/2 scroll-indicator" style="z-index:5">
     <span style="font-family:'DM Mono',monospace;font-size:0.625rem;letter-spacing:0.15em;color:#6b7280;text-transform:uppercase">Scroll</span>
     <div class="scroll-line"></div>
   </div>
 </section>
-
+ 
 <!-- ===================== ABOUT ===================== -->
 <section id="about" style="background:#0a0a0b;padding:7rem 0;position:relative">
-
+ 
   <!-- decorative emerald bar -->
   <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,#10b981,transparent)"></div>
-
+ 
   <div class="max-w-7xl mx-auto px-6 md:px-16">
-
+ 
     <!-- Header row -->
     <div class="grid md:grid-cols-2 gap-16 items-start">
       <div class="reveal-left">
@@ -700,7 +700,7 @@
           <span style="color:#10b981">BUILT ON TRUST</span>
         </h2>
         <p style="color:#9ca3af;line-height:1.8;margin-bottom:1rem;font-size:0.9375rem">
-          KATCO (Kazakhstan Atompromprom Company) is a joint venture between
+          KATCO is a joint venture between
           <strong style="color:#e5e7eb">Orano (France)</strong> and
           <strong style="color:#e5e7eb">Kazatomprom (Kazakhstan)</strong> — two of
           the world's foremost names in uranium production, united since 1996.
@@ -710,17 +710,17 @@
           via the environmentally superior <em style="color:#10b981">In-Situ Recovery (ISR)</em> method,
           avoiding traditional open-pit mining and dramatically reducing surface disruption.
         </p>
-
+ 
         <div class="flex flex-wrap gap-4 mt-8">
           <a href="#contact" class="btn-primary">Partner With Us</a>
           <a href="#tech"    class="btn-outline">Learn ISR →</a>
         </div>
       </div>
-
+ 
       <!-- Right: Info tiles -->
       <div class="grid grid-cols-2 gap-4 reveal-right">
         <div style="padding:1.5rem;border:1px solid #1e1e22;border-radius:2px;background:#111113">
-          <div style="color:#f59e0b;font-family:'Bebas Neue',sans-serif;font-size:2rem;margin-bottom:0.5rem">50% / 50%</div>
+          <div style="color:#f59e0b;font-family:'Bebas Neue',sans-serif;font-size:2rem;margin-bottom:0.5rem">51% / 49%</div>
           <div style="color:#6b7280;font-size:0.8125rem;line-height:1.5">Equal ownership between Orano SA and Kazatomprom JSC</div>
         </div>
         <div style="padding:1.5rem;border:1px solid #1e1e22;border-radius:2px;background:#111113">
@@ -737,7 +737,7 @@
         </div>
       </div>
     </div>
-
+ 
     <!-- Timeline -->
     <div class="mt-20 reveal">
       <div class="section-label mb-8"><span class="emerald-line"></span>Milestones</div>
@@ -764,18 +764,18 @@
           <div style="position:absolute;left:-4px;top:0;width:8px;height:8px;background:#10b981;border-radius:50%;box-shadow:0 0 12px rgba(16,185,129,0.5)"></div>
           <div style="font-family:'DM Mono',monospace;color:#10b981;font-size:0.75rem;margin-bottom:0.5rem">Today</div>
           <div style="color:#e5e7eb;font-weight:500;font-size:0.9rem;margin-bottom:0.25rem">Global Leader</div>
-          <div style="color:#6b7280;font-size:0.8rem">3 active sites, 1800+ staff, world-class output</div>
+          <div style="color:#6b7280;font-size:0.8rem">3 active sites, 1200+ staff, world-class output</div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- ===================== TECHNOLOGY ===================== -->
 <section id="tech" style="background:#0d0f0e;padding:7rem 0;position:relative">
-
+ 
   <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(16,185,129,0.3),transparent)"></div>
-
+ 
   <div class="max-w-7xl mx-auto px-6 md:px-16">
     <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
       <div class="reveal">
@@ -805,57 +805,57 @@
         </div>
       </div>
     </div>
-
+ 
     <!-- ISR Process Diagram -->
     <div class="reveal">
       <div style="background:#111113;border:1px solid #1e1e22;border-radius:2px;padding:2.5rem;position:relative;overflow:hidden">
         <!-- Bg grid -->
         <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(16,185,129,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,0.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none"></div>
-
+ 
         <div style="font-family:'DM Mono',monospace;font-size:0.6875rem;letter-spacing:0.15em;text-transform:uppercase;color:#6b7280;margin-bottom:2rem">// ISR Process Flow</div>
-
+ 
         <!-- Cross section visual -->
         <div style="position:relative;height:280px;border:1px solid rgba(16,185,129,0.1);border-radius:2px;overflow:hidden;margin-bottom:2rem">
           <!-- Sky layer -->
           <div style="position:absolute;top:0;left:0;right:0;height:22%;background:linear-gradient(180deg,rgba(16,185,129,0.05),transparent);display:flex;align-items:center;padding:0 2rem">
             <span style="font-family:'DM Mono',monospace;font-size:0.65rem;color:#6b7280">SURFACE LEVEL</span>
           </div>
-
+ 
           <!-- Ground divide -->
           <div style="position:absolute;top:22%;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(245,158,11,0.6),transparent)"></div>
-
+ 
           <!-- Underground layer -->
           <div style="position:absolute;top:24%;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(139,69,19,0.08),rgba(101,37,15,0.12))">
             <div style="padding:0.5rem 2rem;font-family:'DM Mono',monospace;font-size:0.6rem;color:#6b7280">OVERBURDEN</div>
           </div>
-
+ 
           <!-- Ore zone -->
           <div style="position:absolute;top:50%;left:0;right:0;height:28%;background:rgba(245,158,11,0.06);border-top:1px dashed rgba(245,158,11,0.3);border-bottom:1px dashed rgba(245,158,11,0.3)">
             <div style="padding:0.25rem 2rem;font-family:'DM Mono',monospace;font-size:0.6rem;color:#f59e0b">URANIUM ORE BODY</div>
           </div>
-
+ 
           <!-- Injection wells -->
           <div style="position:absolute;top:22%;left:20%;width:4px;height:62%;background:linear-gradient(180deg,#10b981,rgba(16,185,129,0.3));border-radius:2px"></div>
           <div style="position:absolute;top:22%;left:40%;width:4px;height:62%;background:linear-gradient(180deg,#10b981,rgba(16,185,129,0.3));border-radius:2px"></div>
           <div style="position:absolute;top:22%;left:60%;width:4px;height:62%;background:linear-gradient(180deg,#f59e0b,rgba(245,158,11,0.3));border-radius:2px"></div>
           <div style="position:absolute;top:22%;left:80%;width:4px;height:62%;background:linear-gradient(180deg,#f59e0b,rgba(245,158,11,0.3));border-radius:2px"></div>
-
+ 
           <!-- Labels at top of wells -->
           <div style="position:absolute;top:10%;left:16%;font-family:'DM Mono',monospace;font-size:0.55rem;color:#10b981;text-align:center">INJECT</div>
           <div style="position:absolute;top:10%;left:36%;font-family:'DM Mono',monospace;font-size:0.55rem;color:#10b981;text-align:center">INJECT</div>
           <div style="position:absolute;top:10%;left:56%;font-family:'DM Mono',monospace;font-size:0.55rem;color:#f59e0b;text-align:center">PUMP</div>
           <div style="position:absolute;top:10%;left:77%;font-family:'DM Mono',monospace;font-size:0.55rem;color:#f59e0b;text-align:center">PUMP</div>
-
+ 
           <!-- Flow arrows in ore zone -->
           <div style="position:absolute;top:60%;left:24%;font-size:1rem;color:rgba(16,185,129,0.6)">→</div>
           <div style="position:absolute;top:60%;left:44%;font-size:1rem;color:rgba(16,185,129,0.6)">→</div>
-
+ 
           <!-- Processing plant on surface -->
           <div style="position:absolute;top:4%;right:4%;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);border-radius:2px;padding:0.3rem 0.6rem">
             <span style="font-family:'DM Mono',monospace;font-size:0.6rem;color:#10b981">PROCESSING PLANT</span>
           </div>
         </div>
-
+ 
         <!-- Steps -->
         <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
           <div class="process-step">
@@ -870,7 +870,7 @@
           </div>
           <div class="process-step">
             <div style="font-family:'DM Mono',monospace;color:#f59e0b;font-size:0.65rem;letter-spacing:0.1em;margin-bottom:0.25rem">03 / PUMP</div>
-            <div style="font-weight:600;color:#e5e7eb;font-size:0.9rem;margin-bottom:0.25rem">Pregnant Liquor</div>
+            <div style="font-weight:600;color:#e5e7eb;font-size:0.9rem;margin-bottom:0.25rem">Production solution</div>
             <div style="color:#6b7280;font-size:0.8rem;line-height:1.6">Uranium-bearing solution pumped to surface processing facility</div>
           </div>
           <div class="process-step">
@@ -883,13 +883,13 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ===================== STATS ===================== -->
 <section id="stats" style="background:#0a0a0b;padding:6rem 0;position:relative;overflow:hidden">
-
+ 
   <!-- Large BG text -->
   <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Bebas Neue',sans-serif;font-size:clamp(8rem,20vw,18rem);color:rgba(16,185,129,0.03);white-space:nowrap;pointer-events:none;user-select:none">URANIUM</div>
-
+ 
   <div class="max-w-7xl mx-auto px-6 md:px-16 relative">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 stagger">
       <div style="text-align:center;padding:2rem 1rem">
@@ -913,7 +913,7 @@
         <div style="font-size:0.8125rem;color:#6b7280">Continuous safe operation</div>
       </div>
     </div>
-
+ 
     <!-- Progress bars -->
     <div class="grid md:grid-cols-3 gap-8 mt-16 reveal">
       <div>
@@ -946,11 +946,11 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ===================== PROJECTS ===================== -->
 <section id="projects" style="background:#0d0f0e;padding:7rem 0">
   <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(16,185,129,0.3),transparent);margin-bottom:0"></div>
-
+ 
   <div class="max-w-7xl mx-auto px-6 md:px-16">
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
       <div class="reveal">
@@ -966,12 +966,12 @@
         </p>
       </div>
     </div>
-
+ 
     <div class="grid md:grid-cols-3 gap-6 stagger">
       <!-- Card 1 -->
       <div class="project-card">
         <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=600&auto=format&fit=crop&q=70" alt="Tortkuduk mine site" loading="lazy"/>
+          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTnacdTXdkyvafqppqnfW9bwYcqbXhtPS2gu37qxVD_RXih3j3m" alt="Tortkuduk mine site" loading="lazy"/>
           <div class="card-overlay"></div>
           <div style="position:absolute;bottom:1rem;left:1.25rem">
             <div class="emerald-tag" style="font-size:0.6rem">Active</div>
@@ -993,7 +993,7 @@
           </div>
         </div>
       </div>
-
+ 
       <!-- Card 2 -->
       <div class="project-card">
         <div class="card-image">
@@ -1019,11 +1019,11 @@
           </div>
         </div>
       </div>
-
+ 
       <!-- Card 3 -->
       <div class="project-card">
         <div class="card-image">
-          <img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?w=600&auto=format&fit=crop&q=70" alt="South Tortkuduk drilling" loading="lazy"/>
+          <img src="https://cdn.orano.group/orano/images/default-source/orano/actualites-groupe/2025/tortkuduk-by-night.jpg?sfvrsn=47f82a3b_6" alt="South Tortkuduk drilling" loading="lazy"/>
           <div class="card-overlay"></div>
           <div style="position:absolute;bottom:1rem;left:1.25rem">
             <div class="emerald-tag" style="font-size:0.6rem">Active</div>
@@ -1046,7 +1046,7 @@
         </div>
       </div>
     </div>
-
+ 
     <!-- Map hint -->
     <div class="mt-10 reveal">
       <div class="map-placeholder" style="height:220px">
@@ -1064,11 +1064,11 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ===================== SUSTAINABILITY ===================== -->
 <section id="sustain" style="background:#0a0a0b;padding:7rem 0">
   <div class="max-w-7xl mx-auto px-6 md:px-16">
-
+ 
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <!-- Left -->
       <div>
@@ -1081,7 +1081,7 @@
           stewardship are not in conflict — they are inseparable. Our ISR method
           is proof that nuclear fuel can be produced with a genuinely light footprint.
         </p>
-
+ 
         <div class="flex flex-col gap-4 stagger">
           <div class="sustain-item">
             <div style="width:44px;height:44px;min-width:44px;border:1px solid rgba(16,185,129,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#10b981;font-size:1.125rem">🌿</div>
@@ -1113,19 +1113,19 @@
           </div>
         </div>
       </div>
-
+ 
       <!-- Right: nuclear energy context -->
       <div class="reveal-right">
         <div style="background:#111113;border:1px solid #1e1e22;border-radius:2px;padding:2.5rem;position:relative;overflow:hidden">
           <div style="position:absolute;top:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,#10b981,#34d399,#6ee7b7)"></div>
-
+ 
           <div style="font-family:'Bebas Neue',sans-serif;font-size:1.75rem;color:#fff;margin-bottom:1rem">WHY URANIUM MATTERS</div>
           <p style="color:#9ca3af;font-size:0.875rem;line-height:1.8;margin-bottom:1.5rem">
             Nuclear power produces <strong style="color:#10b981">zero direct CO₂ emissions</strong> during operation.
             A single uranium fuel pellet holds as much energy as
             <strong style="color:#e5e7eb">1 tonne of coal</strong>.
           </p>
-
+ 
           <div class="grid grid-cols-2 gap-4 mb-1.5rem">
             <div style="padding:1rem;border:1px solid rgba(16,185,129,0.15);border-radius:2px;text-align:center">
               <div style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#10b981">~0g</div>
@@ -1136,7 +1136,7 @@
               <div style="font-size:0.7rem;color:#6b7280;letter-spacing:0.08em;text-transform:uppercase">Baseload<br/>power available</div>
             </div>
           </div>
-
+ 
           <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #1e1e22">
             <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:#6b7280;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.75rem">Certifications</div>
             <div class="flex flex-wrap gap-2">
@@ -1151,11 +1151,11 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ===================== CAREERS ===================== -->
 <section id="careers" style="background:#0d0f0e;padding:7rem 0">
   <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(16,185,129,0.3),transparent);margin-bottom:0"></div>
-
+ 
   <div class="max-w-7xl mx-auto px-6 md:px-16">
     <div class="grid md:grid-cols-2 gap-16 items-start">
       <div>
@@ -1166,7 +1166,7 @@
           <span style="color:#10b981">CLEAN ENERGY</span>
         </h2>
         <p style="color:#9ca3af;line-height:1.8;font-size:0.9375rem;margin-bottom:2rem" class="reveal">
-          Join a team of 1,800+ professionals shaping the future of sustainable
+          Join a team of 1,200+ professionals shaping the future of sustainable
           uranium production. KATCO offers international career exposure with
           competitive packages in one of Kazakhstan's most progressive industrial companies.
         </p>
@@ -1174,7 +1174,7 @@
           <a href="#contact" class="btn-primary">View Open Positions</a>
         </div>
       </div>
-
+ 
       <!-- Job listings -->
       <div class="flex flex-col gap-3 stagger">
         <div class="career-card">
@@ -1231,11 +1231,11 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ===================== CONTACT ===================== -->
 <section id="contact" style="background:#0a0a0b;padding:7rem 0">
   <div class="max-w-7xl mx-auto px-6 md:px-16">
-
+ 
     <div class="text-center mb-16 reveal">
       <div class="section-label mb-4"><span class="emerald-line"></span>Contact Us</div>
       <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);line-height:1;color:#fff">
@@ -1246,7 +1246,7 @@
         we welcome the conversation.
       </p>
     </div>
-
+ 
     <div class="grid md:grid-cols-2 gap-12">
       <!-- Form -->
       <div class="reveal-left">
@@ -1291,31 +1291,31 @@
           ✓ Message sent successfully. We'll be in touch shortly.
         </div>
       </div>
-
+ 
       <!-- Contact info + map -->
       <div class="flex flex-col gap-6 reveal-right">
         <div class="grid sm:grid-cols-2 gap-4">
           <div style="padding:1.25rem;border:1px solid #1e1e22;border-radius:2px">
             <div style="font-size:0.65rem;font-family:'DM Mono',monospace;color:#10b981;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem">Head Office</div>
-            <div style="color:#e5e7eb;font-size:0.875rem;line-height:1.7">KATCO LLP<br/>Almaty, Kazakhstan<br/>050010</div>
+            <div style="color:#e5e7eb;font-size:0.875rem;line-height:1.7">KATCO LLP<br/>Kazakhstan, Astana City, Geidar Aliyev street, block 16<br/>050010</div>
           </div>
           <div style="padding:1.25rem;border:1px solid #1e1e22;border-radius:2px">
             <div style="font-size:0.65rem;font-family:'DM Mono',monospace;color:#10b981;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem">Contact</div>
             <div style="color:#e5e7eb;font-size:0.875rem;line-height:1.7">
               <a href="mailto:info@katco.kz" style="color:#10b981;text-decoration:none">info@katco.kz</a><br/>
-              <a href="tel:+77273330920" style="color:#9ca3af;text-decoration:none">+7 (727) 333-09-20</a>
+              <a href="tel:+77273330920" style="color:#9ca3af;text-decoration:none">+7 7272 69 21 21</a>
             </div>
           </div>
           <div style="padding:1.25rem;border:1px solid #1e1e22;border-radius:2px">
             <div style="font-size:0.65rem;font-family:'DM Mono',monospace;color:#f59e0b;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem">Orano SA</div>
-            <div style="color:#9ca3af;font-size:0.8rem;line-height:1.6">Paris, France<br/>50% shareholder</div>
+            <div style="color:#9ca3af;font-size:0.8rem;line-height:1.6">Paris, France<br/>51% shareholder</div>
           </div>
           <div style="padding:1.25rem;border:1px solid #1e1e22;border-radius:2px">
             <div style="font-size:0.65rem;font-family:'DM Mono',monospace;color:#f59e0b;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem">Kazatomprom</div>
-            <div style="color:#9ca3af;font-size:0.8rem;line-height:1.6">Astana, Kazakhstan<br/>50% shareholder</div>
+            <div style="color:#9ca3af;font-size:0.8rem;line-height:1.6">Astana, Kazakhstan<br/>49% shareholder</div>
           </div>
         </div>
-
+ 
         <!-- Map placeholder -->
         <div class="map-placeholder" style="flex:1;min-height:180px">
           <svg style="position:relative;z-index:1" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -1323,7 +1323,7 @@
             <circle cx="14" cy="11" r="3" stroke="#10b981" stroke-width="1.5"/>
           </svg>
           <div style="position:relative;z-index:1;text-align:center">
-            <div style="font-family:'DM Mono',monospace;font-size:0.7rem;color:#6b7280;letter-spacing:0.1em">ALMATY, KAZAKHSTAN</div>
+            <div style="font-family:'DM Mono',monospace;font-size:0.7rem;color:#6b7280;letter-spacing:0.1em">Kazakhstan, Astana City, Geidar Aliyev street, block 16</div>
             <div style="color:#4b5563;font-size:0.7rem;margin-top:0.2rem">43.2220° N, 76.8512° E</div>
           </div>
         </div>
@@ -1331,7 +1331,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ===================== FOOTER ===================== -->
 <footer style="background:#0a0a0b;border-top:1px solid #1e1e22;padding:3rem 0 2rem">
   <div class="max-w-7xl mx-auto px-6 md:px-16">
@@ -1357,7 +1357,7 @@
           <a href="#" style="padding:0.4rem 0.75rem;border:1px solid #1e1e22;border-radius:2px;font-family:'DM Mono',monospace;font-size:0.65rem;color:#6b7280;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s" onmouseover="this.style.borderColor='rgba(16,185,129,0.4)';this.style.color='#10b981'" onmouseout="this.style.borderColor='#1e1e22';this.style.color='#6b7280'">LinkedIn</a>
         </div>
       </div>
-
+ 
       <!-- Navigation -->
       <div>
         <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:#10b981;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1rem">Navigation</div>
@@ -1370,7 +1370,7 @@
           <a href="#contact">Contact</a>
         </div>
       </div>
-
+ 
       <!-- Quick info -->
       <div>
         <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:#10b981;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1rem">Quick Info</div>
@@ -1379,11 +1379,11 @@
           <div style="color:#6b7280">Founded: 1996</div>
           <div style="color:#6b7280">Method: ISR (In-Situ Recovery)</div>
           <div style="color:#6b7280">Region: Turkestan, Kazakhstan</div>
-          <div style="color:#6b7280">Employees: 1,800+</div>
+          <div style="color:#6b7280">Employees: 1,200+</div>
         </div>
       </div>
     </div>
-
+ 
     <!-- Bottom bar -->
     <div style="padding-top:2rem;border-top:1px solid #1e1e22;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem">
       <div style="font-size:0.75rem;color:#4b5563">
@@ -1397,19 +1397,19 @@
     </div>
   </div>
 </footer>
-
+ 
 <!-- ===================== SCRIPTS ===================== -->
 <script>
 // ---- Cursor ----
 const cursor = document.getElementById('cursor');
 const ring   = document.getElementById('cursorRing');
 let mx = 0, my = 0, rx = 0, ry = 0;
-
+ 
 document.addEventListener('mousemove', e => {
   mx = e.clientX; my = e.clientY;
   cursor.style.transform = `translate(${mx - 6}px, ${my - 6}px)`;
 });
-
+ 
 function animateRing() {
   rx += (mx - rx - 18) * 0.12;
   ry += (my - ry - 18) * 0.12;
@@ -1417,7 +1417,7 @@ function animateRing() {
   requestAnimationFrame(animateRing);
 }
 animateRing();
-
+ 
 document.querySelectorAll('a, button, .project-card, .career-card').forEach(el => {
   el.addEventListener('mouseenter', () => {
     cursor.style.transform += ' scale(2.5)';
@@ -1435,13 +1435,13 @@ document.querySelectorAll('a, button, .project-card, .career-card').forEach(el =
     ring.style.marginLeft = '0';
   });
 });
-
+ 
 // ---- Navbar scroll ----
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
-
+ 
 // ---- Mobile nav ----
 document.getElementById('mobileMenu').addEventListener('click', () => {
   document.getElementById('mobileNav').style.display = 'flex';
@@ -1452,7 +1452,7 @@ document.getElementById('closeMenu').addEventListener('click', () => {
 function closeMobileNav() {
   document.getElementById('mobileNav').style.display = 'none';
 }
-
+ 
 // ---- Particles ----
 const particleContainer = document.getElementById('particles');
 for (let i = 0; i < 30; i++) {
@@ -1471,7 +1471,7 @@ for (let i = 0; i < 30; i++) {
   `;
   particleContainer.appendChild(p);
 }
-
+ 
 // ---- Intersection Observer (reveals) ----
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -1487,9 +1487,9 @@ const io = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.15 });
-
+ 
 document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger').forEach(el => io.observe(el));
-
+ 
 // also observe stats section progress bars separately
 const statsSection = document.getElementById('stats');
 if (statsSection) {
@@ -1505,7 +1505,7 @@ if (statsSection) {
   }, {threshold: 0.3});
   statsIo.observe(statsSection);
 }
-
+ 
 // ---- Count-up ----
 function animateCount(el) {
   const target = parseInt(el.dataset.target, 10);
@@ -1522,7 +1522,7 @@ function animateCount(el) {
   }
   requestAnimationFrame(update);
 }
-
+ 
 // Trigger hero count-ups on load
 window.addEventListener('load', () => {
   setTimeout(() => {
@@ -1533,7 +1533,7 @@ window.addEventListener('load', () => {
     });
   }, 300);
 });
-
+ 
 // ---- Form ----
 function handleSubmit(e) {
   e.preventDefault();
@@ -1548,7 +1548,7 @@ function handleSubmit(e) {
     setTimeout(() => document.getElementById('formSuccess').style.display = 'none', 5000);
   }, 1200);
 }
-
+ 
 // ---- Parallax hero title on scroll ----
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
@@ -1560,3 +1560,4 @@ window.addEventListener('scroll', () => {
 </script>
 </body>
 </html>
+ 
